@@ -1,0 +1,27 @@
+<head>
+  <title>fun</title>
+</head>
+
+<body>
+  <h1>Bill Sucks</h1>
+
+  {{> matchup}}
+</body>
+
+<template name="matchup">
+<table border=1>
+	<tr><td>
+		<table>
+		{{#each mattsStarters}}
+		<tr><td>{{name}}</td><td>{{position}}</td><td>{{fantasyPoints}}</td></tr>
+		{{/each}}
+		</table>
+	</td><td>
+		<table>
+			{{#each billsStarters}}
+			<tr><td>{{name}}</td><td>{{position}}</td><td>{{fantasyPoints}}</td></tr>
+			{{/each}}
+		</table>
+	</td></tr>
+</table>
+</template>
